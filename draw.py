@@ -10,7 +10,7 @@ blank = np.zeros((500,500,3), dtype = 'uint8')  #creating blank image
 
 
 #2. Draw a rectangle
-cv.rectangle(blank, (0,0), (250,250), (0,255,0), thickness = 2)
+cv.rectangle(blank, (15,15), (300,250), (0,255,0), thickness = 2)
 cv.imshow('Rectangle', blank)
 
 
