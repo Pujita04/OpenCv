@@ -25,7 +25,7 @@ def rotate(img, angle, rotPoint = None):
     (height, width) = img.shape[:2]
 
     if rotPoint is None:
-        rotPoint = (width//2, height //2)
+        rotPoint = (width//2, height//2)
 
     rotMat = cv.getRotationMatrix2D(rotPoint, angle, 1.0)
     dimensions = (width, height)
@@ -34,15 +34,15 @@ def rotate(img, angle, rotPoint = None):
 
 rotated = rotate(img, 45)
 #negative angle will rotate clockwise 
-
 cv.imshow('Rotated', rotated)
-
 rotated_rotated = rotate(img, 90)
 cv.imshow('Rotated again', rotated_rotated)
+
 
 #Resizing
 resized = cv.resize(img, (500,500), interpolation= cv.INTER_AREA)
 cv.imshow('Resized', resized)
+
 
 #Flipping
 flip = cv.flip(img, -1)
